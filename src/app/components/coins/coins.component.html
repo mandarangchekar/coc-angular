@@ -1,0 +1,34 @@
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Bank Coins</ion-card-title>
+  </ion-card-header>
+  <div class="division">
+    <ion-item>
+      <ion-label> Rs 10 X</ion-label>
+      <ion-input type="number"  (keyup)="getVal1($event.target.value)" (keyup)="totalVal1($event.target.value*10)" ></ion-input>
+      <ion-content >{{ currentVal1*10 }}</ion-content>
+    </ion-item>
+    <ion-item>
+      <ion-label> Rs 5 X</ion-label>
+      <ion-input type="number"  (keyup)="getVal2($event.target.value)"  (keyup)="totalVal2($event.target.value*5)"></ion-input>
+      <ion-content >{{ currentVal2*5 }}</ion-content>
+    </ion-item>
+    <ion-item>
+      <ion-label> Rs 2 X</ion-label>
+      <ion-input type="number"  (keyup)="getVal3($event.target.value)" (keyup)="totalVal3($event.target.value*2)"></ion-input>
+      <ion-content >{{ currentVal3*2 }}</ion-content>
+    </ion-item>
+    <ion-item>
+      <ion-label> Rs 1 X</ion-label>
+      <ion-input type="number"  (keyup)="getVal4($event.target.value)"(keyup)="totalVal4($event.target.value*1)" ></ion-input>
+      <ion-content >{{ currentVal4*1 }}</ion-content>
+    </ion-item> 
+
+    <ion-item>
+      <ion-label> Coins total amt:</ion-label>
+      
+      <ion-content>Rs: {{ +total1 + +total2 + +total3 + +total4 }}</ion-content>
+    </ion-item>
+  </div>
+</ion-card>

@@ -1,0 +1,66 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Bank Notes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <p>Bank notes page works!</p>
+</ion-content> -->
+
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Bank Notes</ion-card-title>
+  </ion-card-header>
+  <div class="division">
+    <ion-item>
+      <ion-label> Rs 2000 X</ion-label>
+      <ion-input type="number"  (keyup)="getVal1($event.target.value)" (keyup)="totalVal1($event.target.value*2000)" ></ion-input>
+      <ion-content >{{ currentVal1*2000 }}</ion-content>
+    </ion-item>
+    <ion-item>
+      <ion-label> Rs 1000 X</ion-label>
+      <ion-input type="number"  (keyup)="getVal2($event.target.value)"  (keyup)="totalVal2($event.target.value*1000)"></ion-input>
+      <ion-content >{{ currentVal2*1000 }}</ion-content>
+    </ion-item>
+    <ion-item>
+      <ion-label> Rs 500 X</ion-label>
+      <ion-input type="number"  (keyup)="getVal3($event.target.value)" (keyup)="totalVal3($event.target.value*500)"></ion-input>
+      <ion-content >{{ currentVal3*500 }}</ion-content>
+    </ion-item>
+    <ion-item>
+      <ion-label> Rs 200 X</ion-label>
+      <ion-input type="number"  (keyup)="getVal4($event.target.value)"(keyup)="totalVal4($event.target.value*200)" ></ion-input>
+      <ion-content >{{ currentVal4*200 }}</ion-content>
+    </ion-item>
+    <ion-item>
+      <ion-label> Rs 100 X</ion-label>
+      <ion-input type="number"  (keyup)="getVal5($event.target.value)" (keyup)="totalVal5($event.target.value*100)" ></ion-input>
+      <ion-content >{{ currentVal5*100 }}</ion-content>
+    </ion-item>
+    <ion-item>
+      <ion-label> Rs 50 X</ion-label>
+      <ion-input type="number"  (keyup)="getVal6($event.target.value)" (keyup)="totalVal6($event.target.value*50)"></ion-input>
+      <ion-content >{{ currentVal6*50 }}</ion-content>
+    </ion-item>
+    <ion-item>
+      <ion-label> Rs 20 X</ion-label>
+      <ion-input type="number"  (keyup)="getVal7($event.target.value)" (keyup)="totalVal7($event.target.value*20)" ></ion-input>
+      <ion-content >{{ currentVal7*20 }}</ion-content>
+    </ion-item>
+    <ion-item>
+      <ion-label> Rs 10 X</ion-label>
+      <ion-input type="number"  (keyup)="getVal8($event.target.value)" (keyup)="totalVal8($event.target.value*10)"  ></ion-input>
+      <ion-content >{{ currentVal8*10 }}</ion-content>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label> Notes total amt:</ion-label>
+      
+      <ion-content>Rs: {{ +total1 + +total2 + +total3 + +total4 + +total5 + +total6 + +total7 + +total8
+      }}</ion-content>
+    </ion-item>
+  </div>
+</ion-card>
